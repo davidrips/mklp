@@ -1,0 +1,238 @@
+  
+
+*{
+    font-family: "Raleway", sans-serif !important;
+    font-size: 12pt;
+}
+
+
+@media (max-width: 768px) { 
+    #pg1logo{
+    max-height: 29vh;
+    }
+
+    #introhead{
+    text-align: center !important;
+     /*font-size: 24px*/
+
+    }   
+
+    #introsub{
+    text-align: center !important;
+
+    }
+
+ }
+ 
+body{
+    height: 100%;
+    width:100%;
+}
+#a{
+    min-height: 100vh;
+}
+
+#firstslidebox{
+    background: #3c3d65;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+
+}
+
+#firstpgcontainer{
+    display:flex;
+    align-items: center;
+}
+
+
+#imgcontainer1{
+   display: flex;
+   justify-content: center;
+}
+
+#pg1logo{
+    max-width: 100%;
+}
+
+#introhead{
+    color: #f2d040;
+    text-align: center;
+    font-size: 3em;
+  
+}
+
+#introhead2{
+    color: #f2d040;
+    text-align: right;
+    font-size: 3em;
+    text-transform: none !important;
+  
+}
+
+#introsub{
+    text-align: center;
+    color: white;
+    margin-bottom: 24px;
+    /*text-transform: none !important;*/
+}
+
+#firstpgcontainerrow{
+    min-width: 100vw;
+}
+
+label{
+    color:#f2d040;
+}
+
+#formField1{
+    display: flex;
+    justify-content: center;
+}
+
+#submitButton1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#submitButton1 button{
+    color:#3c3d65;
+}
+
+#signupdiv{
+
+}
+
+
+
+#newModalBody{
+    background: #44a2d9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+#newModalTitle{
+    color:#3c3d65;
+    color:white;
+    font-size: 3em;
+
+
+}
+#newModalSub{
+    color:#f2d040;
+
+}
+#newModalText{
+    color:white;
+
+}
+#newModalSubText{
+    color: #f2d040;
+
+}
+
+#newModalButton{
+    color:#3c3d65;
+
+}
+
+#newModalButtonBlog{
+     color:#3c3d65;
+}
+
+#newModalButtonsCont{
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .modal-header, h4, .close {
+      background-color: #5cb85c;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-footer {
+      background-color: #f9f9f9;
+  }
+
+ 
+
+
+ .intro-heading {
+    color: #FFA500 !important;
+    font-size: 30px !important;
+ }
+
+ .signup {
+    color: #FFA500 !important;
+    font-size: 15px !important;
+ }
+
+ .input-group[class*="col-"] {
+    padding-right: 15px;
+    padding-left: 15px;
+    }
+
+#navLogo{
+    height:20%;
+    width: 20%;
+}
+ .navbar-brand {
+   /* width: 60%;
+    height:60%;
+*/ /*   margin-top: -20px !important;
+    margin-bottom: 40px !important;*/
+    /*margin-left: 50px !important;*/
+}
+
+p {
+    font-size: 16px;
+    color: #FFA500;
+}
+
+
+
+.placeholder {
+    color: #FFA500 !important;
+}
+
+.formback {
+    width: 100%;
+    height: 300px;
+}  
