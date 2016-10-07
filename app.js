@@ -26,7 +26,34 @@ app.use(cookieParser());
 // app.use('/', routes);
 
 var Sequelize = require('sequelize');
-var sequelize = new Sequelize('myKlovrUsers','root', 'root');
+
+var pg = require('pg');
+
+pg.defaults.ssl = true;
+pg.connect(process.env.DATABASE_URL, function(err, client) {
+  if (err) throw err;
+  console.log('Connected to postgres! Getting schemas...');
+
+  client
+    .query('SELECT table_schema,table_name FROM information_schema.tables;')
+    .on('row', function(row) {
+      console.log(JSON.stringify(row));
+    });
+});
+
+var sequelize = new Sequelize(process.env.DATABASE_URL, {
+      dialect:  'postgres',
+      protocol: 'postgres',
+      port:     match[4],
+      host:     match[3],
+      logging:  true //false
+    })
+
+
+
+
+
+// var sequelize = new Sequelize('myKlovrUsers','root', 'root');
 var Newusers = sequelize.define('auser',{
   id:{type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
   first: Sequelize.STRING,
