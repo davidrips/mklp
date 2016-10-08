@@ -78,6 +78,17 @@ body{
     /*text-transform: none !important;*/
 }
 
+footer{
+    background-color: #3c3d65;
+}
+
+footer h4{
+    text-align: center;
+    color:#f2d040 !important;
+    background-color: #3c3d65;
+    text-transform: none !important;
+}
+
 #firstpgcontainerrow{
     min-width: 100vw;
 }
