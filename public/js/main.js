@@ -13,6 +13,7 @@ $(document).ready(function(){
         // everything looks good!
         e.preventDefault();
             console.log("clicked");
+            fbq('track', 'Lead');
 
             var first = $('#inputFirstName').val()
             var last = $('#inputLastName').val() 
