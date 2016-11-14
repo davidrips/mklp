@@ -1059,7 +1059,7 @@ font-family: 'Amatic SC';
 
 #connectContainer{
     background-color: #44a2d9;
-    /*height: 100%;*/
+    height: 100%;
     width: 100vw;
     display: flex;
     padding-top: 5vh;
@@ -1101,14 +1101,17 @@ font-family: 'Amatic SC';
 }
 
 #contextcon{
-    display: inline-block;
+    display: inline-flex;
     white-space: nowrap;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 #secondpgcontent7{
     display: inline-block;
     right:200%;
-    flex: 1;
+    /*flex: 1;*/
     font-size: 4vmin;
     /*line-height: 100%;*/
     position: relative;
