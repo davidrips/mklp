@@ -457,7 +457,7 @@ label{
 }
 
 #secondpgcontent1{
-    font-size: 8vmin;
+    /*width: 20vw;*/
     left: -100%;
 }
 #bodyrow{
@@ -1369,7 +1369,9 @@ font-family: 'Amatic SC';
         margin-top: 20px;
     }
 
+    #secondpgcontent1{
 
+    }
 
 
     #controw7a {
@@ -1431,21 +1433,10 @@ font-family: 'Amatic SC';
     }
     #secondpgcontent1{
         left: 0%;
-        font-weight: 600;
-        
+        font-size: 15vmin;
     }
     #qlcirc{
         width: auto;
-        height:auto;
-    }
-    #qlcriccont{
-        margin-top: 5vh;
-    }
-
-    #probquest{
-        height:100vh;
-        min-height: 100%;
-        margin-bottom: 5vh;
     }
     #secondpgcontent1a{
         right:0%;
@@ -1458,17 +1449,16 @@ font-family: 'Amatic SC';
     }
 
     #missioncont{
-        padding-top: 10vh;
+        padding-top: 5vh;
         padding-bottom: 5vh;
         margin-bottom: 5vh;
         height: 100%;
-        border-top: 1vh dashed white;
 
     }
 
     #svgrow{
         transform: scale(1);
-        height: 100%;
+        height: 25vh;
         margin-bottom: 5vh;
         margin-top: 5vh;
     }
@@ -1629,7 +1619,7 @@ font-family: 'Amatic SC';
 
     #keysvg{
         width: 40vmin;
-        /*height: auto;*/
+        height: auto;
 
     }
 
@@ -1641,7 +1631,79 @@ font-family: 'Amatic SC';
 
 }
 
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
 
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+
+}
 
 /* ----------- iPad mini ----------- */
 
@@ -1660,23 +1722,11 @@ font-family: 'Amatic SC';
 
     #secondpgcontent1{
         left: 0%;
-        font-weight: 600;
-       
+        font-size: 15vmin;
     }
-
     #qlcirc{
         width: auto;
-        height:auto;
     }
-    #qlcriccont{
-        margin-top: 5vh;
-    }
-
-    #probquest{
-        height:100%;
-          margin-bottom: 5vh;
-    }
-   
     #secondpgcontent1a{
         right:0%;
         font-size: 13vmin;
@@ -1688,17 +1738,16 @@ font-family: 'Amatic SC';
     }
 
     #missioncont{
-        padding-top: 10vh;
-        padding-bottom: 10vh;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
         margin-bottom: 5vh;
         height: 100%;
-        border-top: 1vh dashed white;
 
     }
 
     #svgrow{
         transform: scale(1);
-        height: 100%;
+        height: 25vh;
         margin-bottom: 5vh;
         margin-top: 5vh;
     }
@@ -1860,7 +1909,7 @@ font-family: 'Amatic SC';
 
     #keysvg{
         width: 40vmin;
-        /*height: auto;*/
+        height: auto;
 
     }
 
@@ -1932,12 +1981,10 @@ font-family: 'Amatic SC';
     }
     #secondpgcontent1{
         left: 0%;
-        font-weight: 600;
-    
+        font-size: 15vmin;
     }
     #qlcirc{
         width: auto;
-        height:auto;
     }
     #secondpgcontent1a{
         right:0%;
@@ -1959,7 +2006,7 @@ font-family: 'Amatic SC';
 
     #svgrow{
         transform: scale(1);
-        height: 100%;
+        height: 25vh;
         margin-bottom: 5vh;
         margin-top: 5vh;
     }
@@ -2120,7 +2167,7 @@ font-family: 'Amatic SC';
 
     #keysvg{
         width: 40vmin;
-        /*height: auto;*/
+        height: auto;
 
     }
 

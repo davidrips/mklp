@@ -5,6 +5,9 @@ $(document).ready(function(){
 // $('#myForm').validator()
 
 
+
+  
+
     $('#myForm').validator().on('submit', function (e) {
         if (e.isDefaultPrevented()) {
             console.log('gotstuck');
@@ -13,7 +16,6 @@ $(document).ready(function(){
         // everything looks good!
         e.preventDefault();
             console.log("clicked");
-            fbq('track', 'Lead');
 
             var first = $('#inputFirstName').val()
             var last = $('#inputLastName').val() 

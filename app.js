@@ -63,9 +63,23 @@ var Newusers = sequelize.define('auser',{
 
 Newusers.sync();
 
+var Sweepstakes = sequelize.define('sweep',{
+    id:{type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
+    email: Sequelize.STRING,
+    name: Sequelize.STRING,
+    submittedOn: {type: Sequelize.DATE, defaultValue:Sequelize.NOW}
+})
+
+
+Sweepstakes.sync();
+
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname+ '/public/views/index.html'));
 });
+
+app.get('/sweepstakes', function(req,res){
+  res.sendFile(path.join(__dirname+ '/public/views/sweeps.html'));
+})
 
 app.post('/signup', function(req, res){
     Newusers.findAll({
@@ -82,6 +96,31 @@ app.post('/signup', function(req, res){
         first: req.body.first,
         last:req.body.last,
         email:req.body.email
+      }).then(function(user){
+
+        console.log(user);
+        // res.json(user);
+        res.redirect('/')
+
+      })
+    }
+  })
+})
+
+app.post('/sweepstake', function(req, res){
+    Sweepstakes.findAll({
+    where: {email: req.body.email}
+  }).then(function(userArray){
+    console.log(userArray);
+    if (userArray.length > 0){
+    
+     console.log("Already have this email")
+          res.json({have:true})
+          // res.redirect('/sweepstakes')
+    }else{
+      Sweepstakes.create({
+        email:req.body.email,
+        name: req.body.name
       }).then(function(user){
 
         console.log(user);
