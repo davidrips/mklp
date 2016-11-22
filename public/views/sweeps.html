@@ -13,10 +13,12 @@
         <meta property="og:title" content="myKlovr is giving away 2 pairs of Samsung VR Headsets" />
         <meta property="og:description" content="Enter now for a chance to win the perfect gift for yourself or your family. We're all about looking towards the future - and your future gets way more real when you use myKlovr. " />
         <meta property="og:image" content="http://try.myklovr.com/img/vrad.png" />
+         <meta property="fb:app_id" content="156802384772432" />
+         
          <link rel="icon" 
       type="image/png" 
       href="/img/logotiny.png">
-
+               <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
             <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Lato:400,900|Josefin+Slab:400,600,700" rel="stylesheet">
         <style>
@@ -25,6 +27,10 @@
                 padding-bottom: 20px;
             }
         </style>
+            <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
         <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
         <link rel="stylesheet" href="css/main.css">
        <script src="js/modernizr.js"></script>
@@ -857,8 +863,24 @@
 
 
 
-                    <div id='shareTextCont'><h2 class='successModalSub'>Also, feel free to</h2> <div class="fb-share-button" data-href="http://try.myklovr.com/sweepstakes" data-layout="button" data-size="large">Share</div> <h2 class='successModalSub'>this contest with your friends and family!`</h2></div>
+                  <div id='shareTextCont'><h2 class='successModalSub'>Also, feel free to share this contest</h2> 
 
+
+<!-- 
+                    <div class="fb-share-button" data-href="http://try.myklovr.com/sweepstakes" data-layout="button" data-size="large" data-mobile-iframe="true"></div>  -->
+                    <div id=sharebox>
+                        <img src="/img/facebook.png" id='share' />
+                           <a href="https://twitter.com/share?url=http://try.myklovr.com/sweepstakes&amp;text=Win%20A%20VR%20Headset%20With%20@myKlover&amp;hashtags=#myklovr#worryless" target="_blank">
+                                <img src="/img/twitter.png" alt="Twitter" />
+                            </a>
+                          <a href="mailto:?Subject=Thought of you, maybe we can both get these!&amp;Body=I%20saw%20this%20and%20thought%20you%20might%20want%20to%20try%20winning%20this%20VR%20headset%20with%20me!%20  http://try.myklovr.com/sweepstakes">
+                                <img src="/img/mail.png" class='shareButtons' id='mail' />
+                            </a>
+                 
+                    </div>
+
+
+                    <h2 class='successModalSub'>this contest with your friends and family.</h2></div>
                     <div id="successButtonsCont">
               
                         <a class="btn btn-xl signupButton" href="http://www.myklovr.com" target="_blank" id='newModalButtonBlog'>Cool!</a>
@@ -867,6 +889,7 @@
             </div>
           </div>
         </div>
+
 
 
 
