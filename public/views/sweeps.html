@@ -34,6 +34,15 @@
         <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
         <link rel="stylesheet" href="css/main.css">
        <script src="js/modernizr.js"></script>
+        
+        
+<!--         <script type="text/javascript">
+        setTimeout(function(){var a=document.createElement("script");
+        var b=document.getElementsByTagName("script")[0];
+        a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0058/5622.js?"+Math.floor(new Date().getTime()/3600000);
+        a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+        </script> -->
+
     </head>
     
     <body>
@@ -43,7 +52,11 @@
 
   window.fbAsyncInit = function() {
   FB.init({
+    //REAL LIVE//
     appId      : '156802384772432',
+    // //DEPLOY LIVE//
+    // appId      : '174978259621511',
+
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
@@ -60,6 +73,10 @@
     js.src = "//connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
+
+
+
+
 
 
 </script>
@@ -883,7 +900,7 @@
                     <h2 class='successModalSub'>this contest with your friends and family.</h2></div>
                     <div id="successButtonsCont">
               
-                        <a class="btn btn-xl signupButton" href="http://www.myklovr.com" target="_blank" id='newModalButtonBlog'>Cool!</a>
+                        <a class="btn btn-xl signupButton" href="http://try.myklovr.com" target="_blank" id='newModalButtonBlog'>Cool!</a>
                     </div>
               </div>
             </div>
