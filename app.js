@@ -81,6 +81,10 @@ app.get('/sweepstakes', function(req,res){
   res.sendFile(path.join(__dirname+ '/public/views/sweeps.html'));
 })
 
+app.get('/business', function(req,res){
+  res.sendFile(path.join(__dirname+ '/public/views/business.html'));
+})
+
 app.post('/signup', function(req, res){
     Newusers.findAll({
     where: {email: req.body.email}
@@ -100,7 +104,7 @@ app.post('/signup', function(req, res){
 
         console.log(user);
         // res.json(user);
-        res.redirect('/')
+        // res.redirect('/')
 
       })
     }
