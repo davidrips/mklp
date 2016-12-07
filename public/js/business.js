@@ -41,7 +41,7 @@ $(document).ready(function(){
            setTimeout(function(){
                 console.log('this');
                 $("#signModal").modal("hide")
-                $('#newModalTitle').text("Welcome to myKlōvr " + first)
+                $('#newModalTitle').text("Welcome to myKlovr ")
                 $("#newModal").modal();
 
            }, 1500)
@@ -50,7 +50,7 @@ $(document).ready(function(){
 
 
     }
-    
+
 
 
 
