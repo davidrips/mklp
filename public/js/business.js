@@ -14,8 +14,8 @@ $(document).ready(function(){
             var last = "business"
             var email = $('#inputEmail').val()
             $.post('/signup', {
-                first: first,
-                last: last,
+                first: "business",
+                last: "business",
                 email: email
                 }, function(data){
                 // console.log(data);
@@ -27,7 +27,7 @@ $(document).ready(function(){
                  console.log('herenow');
                 $('#newModalTitle').text("Welcome to myKlōvr")
                     $('#newModal').modal();
-            })
+            }, 1500)
         }
     })
 
