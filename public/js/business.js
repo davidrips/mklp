@@ -10,13 +10,13 @@ $(document).ready(function(){
         // everything looks good!
             e.preventDefault();
             console.log("clicked");
-            var first = $('#inputFirstName').val()
-            var last = $('#inputLastName').val() 
+            var first = "Business"
+            var last = "business"
             var email = $('#inputEmail').val()
             $.post('/signup', {
-                first: $('#inputFirstName').val(),
-                last: $('#inputLastName').val(), 
-                email: $('#inputEmail').val()
+                first: first,
+                last: last,
+                email: email
                 }, function(data){
                 // console.log(data);
                
