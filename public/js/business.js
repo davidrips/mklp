@@ -8,18 +8,16 @@ $(document).ready(function(){
         // handle the invalid form...
         } else {
         // everything looks good!
-        e.preventDefault();
+            e.preventDefault();
             console.log("clicked");
-
             var first = $('#inputFirstName').val()
             var last = $('#inputLastName').val() 
             var email = $('#inputEmail').val()
-
             $.post('/signup', {
                 first: $('#inputFirstName').val(),
                 last: $('#inputLastName').val(), 
                 email: $('#inputEmail').val()
-            }, function(data){
+                }, function(data){
                 // console.log(data);
                
                     }
@@ -29,6 +27,7 @@ $(document).ready(function(){
                  console.log('herenow');
                 $('#newModalTitle').text("Welcome to myKlōvr")
                     $('#newModal').modal();
+            })
         }
     })
 
