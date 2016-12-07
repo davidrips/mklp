@@ -2,40 +2,105 @@ $(document).ready(function(){
 
 
 
-    $('#myForm').validator().on('submit', function (e) {
-        if (e.isDefaultPrevented()) {
-            console.log('gotstuck');
-            return false;
-        // handle the invalid form...
-        } else {
-        // everything looks good!
-            e.preventDefault();
-            console.log("clicked");
-          
-            var first = $('#inputFirstName').val()
-            var last = $('#inputLastName').val() 
-            var email = $('#inputEmail', this).val()
-            console.log(last);
-            console.log(email);
 
-            $.post('/signup', {
+    $(document).on('submit', "#myForm", function(e) {
+       console.log('inhere');
+    
+           if (e.isDefaultPrevented()) {
+           console.log('gotstuck');
+           return false;
+       // handle the invalid form...
+       } else {
+       // everything looks good!
+
+       e.preventDefault();
+           console.log("clicked");
+
+           var first = $('#inputFirstName').val()
+           var last = $('#inputLastName').val() 
+           var email = $('#inputEmail', this).val()
+           console.log(first);
+         console.log(email);
+           signUpComplete(email, first, last)
+           return false;
+
+       }
+
+       });
+
+    function signUpComplete(email, first, last){
+
+           $.post('/signup', {
                 first: first,
-                last: last,
+                last: last, 
                 email: email
-                }, function(data){
-                // console.log(data);
-               
-                    }
+            }, function(data){
+                          }
             )
 
-            setTimeout(function(){
-                 console.log('herenow');
-                $('#newModalTitle').text("Welcome to myKlōvr")
-                    $('#newModal').modal();
-            }, 1500)
-            return false;
-        }
-    })
+           setTimeout(function(){
+                console.log('this');
+                $("#signModal").modal("hide")
+                $('#newModalTitle').text("Welcome to myKlōvr " + first)
+                $("#newModal").modal();
+
+           }, 1500)
+
+           
+
+
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // $('#myForm').validator().on('submit', function (e) {
+    //     if (e.isDefaultPrevented()) {
+    //         console.log('gotstuck');
+    //         return false;
+    //     // handle the invalid form...
+    //     } else {
+    //     // everything looks good!
+    //         e.preventDefault();
+    //         console.log("clicked");
+          
+    //         var first = $('#inputFirstName').val()
+    //         var last = $('#inputLastName').val() 
+    //         var email = $('#inputEmail', this).val()
+    //         console.log(last);
+    //         console.log(email);
+
+    //         $.post('/signup', {
+    //             first: first,
+    //             last: last,
+    //             email: email
+    //             }, function(data){
+    //             // console.log(data);
+               
+    //                 }
+    //         )
+
+    //         setTimeout(function(){
+    //              console.log('herenow');
+    //             $('#newModalTitle').text("Welcome to myKlōvr")
+    //                 $('#newModal').modal();
+    //         }, 1500)
+    //         return false;
+    //     }
+    // })
 
      var controller = new ScrollMagic.Controller({loglevel: 3});
 // if(!Modernizr.touchevents){
