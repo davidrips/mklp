@@ -5,17 +5,22 @@ $(document).ready(function(){
     $('#myForm').validator().on('submit', function (e) {
         if (e.isDefaultPrevented()) {
             console.log('gotstuck');
+            return false;
         // handle the invalid form...
         } else {
         // everything looks good!
             e.preventDefault();
             console.log("clicked");
-            var first = "Business"
-            var last = "business"
-            var email = $('#inputEmail').val()
+          
+            var first = $('#inputFirstName').val()
+            var last = $('#inputLastName').val() 
+            var email = $('#inputEmail', this).val()
+            console.log(last);
+            console.log(email);
+
             $.post('/signup', {
-                first: "business",
-                last: "business",
+                first: first,
+                last: last,
                 email: email
                 }, function(data){
                 // console.log(data);
@@ -28,6 +33,7 @@ $(document).ready(function(){
                 $('#newModalTitle').text("Welcome to myKlōvr")
                     $('#newModal').modal();
             }, 1500)
+            return false;
         }
     })
 
