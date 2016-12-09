@@ -148,6 +148,11 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                     <p class='row1txt' id='mainHeading'>myklovr allows you to integrate your organization with our tools, analytics and users.
                     </p>
                   </div>
+                  <div class='screen1row' id='row1buttons'>
+                    <a href="https://access.myklovr.com/#/login" id='row1link' class="row1but btn btn-xl">Log In</a>
+                    <button type="button" id="row1signup" class="row1but btn btn-xl">Sign Up</button>
+
+                  </div>
 
                   <div class="screen1row row1txt" id="row1sub">
                     explore our services:
@@ -615,10 +620,70 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                             </div>
                     </div>
  -->
+          <div class="modal fade" id="signModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body" id="signModalBody">
 
+              <div id="pgform1">
+                        <div id='logintext'>
+                            <h1 id="introhead">LEAVE YOUR INFORMATION AND WE'LL REACH OUT</h1>
+                        </div>
+              
+                        <div id='subtext'>
+                            <h3 id="introsub"> We're excited to talk to you about how myKlovr can help you.</h3>
+                        </div>
+
+                          <img src="/img/facebook.png" id='fbButton' onclick="" />
+                      <span id='signupSpan'>or</span>
+
+
+                        <div id="signupdiv">
+              
+                                <form id="myForm" data-toggle='validator' action='' method='post'>
+                                  
+
+                                    <div class="form-group row" id="formField1">
+                                       <div class="signModalFormField">
+                                            <input type="text" class="form-control" id="inputFirstName" name='first' placeholder="Your First Name" required>
+                                            <div class="help-block with-errors"></div>
+
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group row" id="formField1">
+                                        <div class="signModalFormField">
+                                            <input type="text" class="form-control" id="inputLastName" name='last' placeholder="Your Last Name" required>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                      <div class="form-group row" id="formField1">
+                                        <div class="signModalFormField">
+                                            <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
+                                          
+                                        </div> 
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div id="submitButton1" >
+                                            <button type="submit" id="signupbutton" class="btn btn-xl">Worry Less</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                        </div>
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
 
  
-  <div class="modal fade" id="newModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="newModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-body" id="newModalBody">
@@ -676,8 +741,6 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 
 </html>
-
-
 
 
 
