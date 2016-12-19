@@ -359,6 +359,13 @@ strong {
     padding-bottom: 5vh;
     padding-top: 3vh
 }
+.midtxt{
+    font-size: 6vmin;
+
+}
+  #screen2heading{
+        flex-direction: column;
+    }
 #screen2text {
     height: 100%;
     display: flex;
