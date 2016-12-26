@@ -60,7 +60,7 @@ nav {
     font-weight: 400
     color: #3f3e65;
 }
-
+ 
 #sidenavtrig {
     display: inline;
     position: fixed;
@@ -229,10 +229,10 @@ nav li {
     opacity: 1;
     background-color: #f2d040
 }
-#slideOne {
+/*#slideOne {
     height: 100vh;
     z-index: 100
-}
+}*/
 .fullscreen-bg {
     position: fixed;
     top: 0;
@@ -1659,14 +1659,14 @@ height: auto;
 .imgcontainer2{
     opacity: 1;
 }
-#row2 {
+/*#row2 {
     margin-bottom: 15vh;
      padding-left: 0;
     padding-right: 0;
     margin-top: 2vh;
 flex-wrap: wrap;
 width: 60vw;
-}
+}*/
 #sidenavtrig {
     display: inline
 }
