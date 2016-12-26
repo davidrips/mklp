@@ -13,6 +13,54 @@ body {
 nav {
     display: none
 }
+
+#mainheadinga{
+    font-weight: 400;
+    font-size: 7vmin;
+}
+
+#tempContainer1{
+    height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   padding-bottom: 10vh;
+}
+#tempContainer2{
+    height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+    border-bottom: dashed 3px #3f3e65;
+}
+#slideOne {
+    height: 200vh;
+    z-index: 100
+}
+
+ #row2 {
+  
+    /*display: block;*/
+    /*flex-flow: row wrap;*/
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 5vh;
+    padding-left: 0vh;
+    padding-right: 0vh;
+    height: 100%;
+    width: 100vw
+
+}
+
+#row1subB {
+    font-size: 8.5vmin;
+    font-weight: 400
+    color: #3f3e65;
+}
+
 #sidenavtrig {
     display: inline;
     position: fixed;
