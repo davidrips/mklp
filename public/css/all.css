@@ -126,7 +126,11 @@ nav{
             #loginButton{
                 font-size: 2vmin;
                width: 30vw;
+
                padding: 1vmin 2vmin;
+            }
+            #loginButton a{
+                   color:#3f3e65;
             }
             .loginWrap{
                 white-space: nowrap;
