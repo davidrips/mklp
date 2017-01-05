@@ -88,6 +88,10 @@ app.get('/pricing', function (req, res) {
     res.sendFile(path.join(__dirname+ '/public/views/pricing.html'));
 });
 
+app.get('/about', function (req, res) {
+    res.sendFile(path.join(__dirname+ '/public/views/about.html'));
+});
+
 app.post('/signup', function(req, res){
     Newusers.findAll({
     where: {email: req.body.email}

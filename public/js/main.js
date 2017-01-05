@@ -1,7 +1,20 @@
 $(document).ready(function(){
+    console.log('hello?');
 
-    $("#row1signup").on("click", function(e){
+
+
+
+    $(".arrows").on('click', function(e){
+        $(window).scrollTo('#tempContainer2', {duration:800, ease: Power4.easeInOut})
+
+    })
+
+    $('.signUpBtn').on("click", function(e){
+        // debugger;
+        e.preventDefault()
+        console.log('clickedSignModalOpen');
         $('#signModal').modal();
+    
     })
 
      $(document).on('submit', "#myForm", function(e) {
@@ -115,9 +128,38 @@ $(document).ready(function(){
 
 
      var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+     var isFirefox = typeof InstallTrigger !== 'undefined';
+
+     if (isSafari == true){
+         $("html").addClass('safari')
+     };
+
+     if (isFirefox == true){
+        console.log('ur using firefox lol');
+         $("html").addClass('firefox')
+     };
+
+
+
 
      var controller = new ScrollMagic.Controller({loglevel: 3});
 if(!Modernizr.touchevents){
+    $("html").addClass('desktop')
+    var vid = $("video").height();
+    
+    
+
+  
+    $(window).scroll(function(){
+      if($(document).scrollTop() > vid){//Here 200 may be not be exactly 200px
+        $('video').css('display', 'none');
+        console.log('hiding');
+      }else{
+        if($('video').css('display')=='none'){console.log('wasnt showing');
+        $('video').css('display', 'initial');
+        }
+      }
+    });
 
     if(isSafari==false){
 
@@ -224,7 +266,7 @@ if(!Modernizr.touchevents){
             var howToJoin = new ScrollMagic.Scene({triggerElement: '#section3', triggerHook: "onLeave", duration:"200%"}).setPin('#section3', {pushFollowers:true}).addTo(controller);
     }else{
         console.log('ur using safari arent u');
-        $("html").addClass('safari')
+       
          var av = $("#crimg3").height()
             console.log(av);
             var animHeight = $("#genanimcont").height()
@@ -241,7 +283,8 @@ if(!Modernizr.touchevents){
             // $('#screen6o').css('padding-top', ''+(headHeight + 10)+'px');
             // $('#svg6wrap').css('padding-top', ''+row6combined+'px');
             // $("#pinContainer").css("padding-top", ''+(headHeight + 10)+'px')
-            $("#contextcon").css("padding-top", ''+(headHeight + 10)+'px')
+            // $("#contextcon").css("padding-top", ''+(headHeight + 10)+'px');
+            stillAnimation()
     }
 
 
@@ -251,8 +294,24 @@ if(!Modernizr.touchevents){
 
 }else{
     console.log('touchin');
+    $('head').append('<link rel="stylesheet" type="text/css" href="css/mobile.css"/>');         
+      $('head').append('<link rel="stylesheet" type="text/css" href="css/mobiletablet.css"/>'); 
+      $(".slideOneArrow").css("display", "none")
+      
 
-    var blinkarrows = TweenMax.fromTo($(".svgarrow"), 1, {fill:"#45A2D9"}, {fill:"#FED139", repeat: -1, repeatDelay:2,ease: RoughEase.ease.config({ template: Power0.easeNone, strength: 1, points: 20, taper: "none", randomize: true, clamp: false})});
+
+
+    stillAnimation()
+
+    
+}
+
+
+function stillAnimation(){
+    var blinkarrows = TweenMax.fromTo($(".svgarrow"), 1, {fill:"white"}, {fill:"#FED139", repeat: -1, repeatDelay:2,ease: RoughEase.ease.config({ template: Power0.easeNone, strength: 1, points: 20, taper: "none", randomize: true, clamp: false})});
+     var makeLight = TweenMax.fromTo($(".testsvgblue"), 3, {fill:"white"}, {fill:"#3f3e65", repeat: -1, repeatDelay:2,ease: RoughEase.ease.config({ template: Power0.easeNone, strength: 1, points: 20, taper: "none", randomize: true, clamp: false})});
+
+
 
     var drawscribs = new TimelineMax({repeat:-1})
         .add(TweenMax.to($("#svgscrib2"), 2, {strokeDashoffset: 0, ease:Linear.easeNone}),1)
@@ -292,31 +351,26 @@ if(!Modernizr.touchevents){
 
 
 
-
-
-
-
+    
     $(".is-light").each(function(index, elem){
 
         var height = $(elem).height()
-        console.log(height);
-        console.log(typeof height);
+        var makeLight = new TweenMax.to($(".homeLogoPaths"), 0,{fill:'white'});
         var makeDark = new TweenMax.to($(".homeLogoPaths"), 0,{fill:'#3c3d65'})
-
-        new ScrollMagic.Scene({
-            triggerElement:elem, duration:'"'+height+'px"', triggerHook:"0.03"
-        }).setTween(makeDark).addTo(controller);
+        var isLight = new ScrollMagic.Scene({
+            triggerElement:elem, triggerHook:"0.03"
+        }).setTween(makeDark).addTo(controller)
 
     })
 
      $(".need-light").each(function(index, elem){
         var makeLight = new TweenMax.to($(".homeLogoPaths"), 0,{fill:'white'});
-
-           new ScrollMagic.Scene({
+        var makeDark = new TweenMax.to($(".homeLogoPaths"), 0,{fill:'#3c3d65'})
+        var isDark = new ScrollMagic.Scene({
             triggerElement:elem, triggerHook:"0.03"
         }).setTween(makeLight).addTo(controller);
-
     })
+
 
      var homeButton = $("#homeButton");
      homeButton.on('click', function(e){
@@ -455,13 +509,22 @@ if(!Modernizr.touchevents){
 
 
     function openNav() {
-        document.getElementById("mySidenav").style.width = "30vw";
+
+        if ($("html").hasClass("desktop")){
+            document.getElementById("mySidenav").style.width = "30vw";
+
+        }else {
+           document.getElementById("mySidenav").style.width = "50vw"; 
+        }
+        
     }
 
     function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
 
     }
+
+    
 
 
 })

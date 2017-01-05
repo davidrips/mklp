@@ -25,7 +25,12 @@
 
     <!-- Theme CSS -->
     <link href="css/style.css" rel="stylesheet">
+     <link href="css/all.css" rel="stylesheet">
     <link href="css/business.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css"/>
+      <link rel="stylesheet" type="text/css" href="css/mobiletablet.css"/>
+      <link rel="stylesheet" href="../css/bootstrap-social.css">
+     <link rel="stylesheet" href="../css/font-awesome.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -80,13 +85,14 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn">&times;</a>
-        <a class='' href='/' id="mhome">Home</a>
+        <a class='' href='/' id="mhome">Students and Parents Home</a>
         <a class='menuButs' data-where="what" id="mwho">What We Do</a>
         <a class='menuButs' data-where="uni" id="mvalues">Schools</a>
         <a class='menuButs' data-where="company" id="mstudents">Companies</a>
         <a class='menuButs' data-where="ads" id="mparents">Ads</a>
         <a class='menuButs' data-where="exchange" id="meducators">Exchange</a>
         <a class='menuButs' data-where="hr" id="mabout">Human Resources</a>
+        <a href="/about">About Us</a>
         <!-- <a class='menuButs' data-where="end" id="mend">How to Join</a> -->
     
       </div>
@@ -138,60 +144,108 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 
 
-                <div class='screen1rowcontainer'>
-                <div class="screen1row" id="row0">
-                      <div id='imgcontainer1'>
-                       <img src="/img/logo1.png" id="pg1logo" alt="Responsive image">
+
+                <div class='screen1rowcontainer need-light'>
+                  <div id='tempContainer1'>
+                    <div class="screen1row" id="row0">
+                          <div id='imgcontainer1'>
+                           <img src="/img/logo1.png" id="pg1logo" alt="Responsive image">
+                        </div>
                     </div>
-                </div>
-                  <div class="screen1row" id="row1">
-                    <p class='row1txt' id='mainHeading'>myklovr allows you to integrate your organization with our tools, analytics and users.
-                    </p>
-                  </div>
-                  <div class='screen1row' id='row1buttons'>
-                    <a href="https://access.myklovr.com/#/login" id='row1link' class="row1but btn btn-xl">Log In</a>
-                    <button type="button" id="row1signup" class="row1but btn btn-xl">Sign Up</button>
+                      <div class="screen1row" id="row1">
+                        <p class='row1txt' id='mainHeading'>myklovr allows you to integrate your organization with our tools, analytics and users.
+                        </p>
+                      </div>
 
-                  </div>
-
+                      <div id="loginCont">
+                          <div class="loginSocialContWrap">
+                              <div class='loginSocialCont'>
+                             <a class="btn btn-block btn-social btn-facebook">
+                               <span class="fa fa-facebook"></span> Sign in with Facebook
+                             </a>
+                             <a class="btn btn-block btn-social btn-google"> <span class="fa fa-google"></span> Sign in with Google</a>
+                         </div>
+                       </div>
+                          <div class="loginWrap">
+                            <input class='logInInput' id='loginEmail' placeholder="Email" type="text">
+                            
+                          </div>
+                          <div class="loginWrap">
+                            <input class='logInInput' id='loginPassword' placeholder="Password" type="text">
+                          </div>
+                          <div class='loginWrap' id='loginCheck'>
+                              <input type="checkbox" id='loginRemember'>
+                              <label for="'loginRemember">Remember Me</label>
+                          </div>
+                           <button type="button" id="loginButton" class="row1but btn btn-xl">Log In</button>
+                           <!-- <div class='loginOr'>or</div> -->
+                           <button type="button" id="row1signup" class="row1but btn btn-xl signUpBtn">Sign Up</button>
+                      </div>
                   <div class="screen1row row1txt" id="row1sub">
-                    explore our services:
-                  </div>
-
-                  <div class="screen1row" id="row2a">
-                  
+                    start exploring our services
                   </div>
 
 
+                  <div class='slideOneArrow'>
+                    <svg class="arrows">
+                      <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                    </svg>
+                  </div>
 
-                  <div class="screen1row" id="row2">
-                      <div class='imgcontainer1' id='schoolImg' data-user='uni'>
-                         <img src="/img/uni.png" class="pg1imgs"  alt="Responsive image">
-                         <div class="img1label">schools</div>
+                  </div>
+
+
+
+                  <div id='tempContainer2' class='is-light'> 
+
+                      <div class="screen1row row1txt" id="row1subB">
+                        how can we help?
                       </div>
-                      <div class='imgcontainer1' data-user='company'>
-                         <img src="/img/business.png" class="pg1imgs" id='companyImg' alt="Responsive image">
-                         <div class="img1label">companies</div>
+                      <div class="screen1row" id="row2">
+                        
+                          <div class="img1wrap">
+                            <div class='imgcontainer1' id='schoolImg' data-user='uni'>
+                               <img src="/img/uni.png" class="pg1imgs"  alt="Responsive image">
+                               <div class="img1label">schools</div>
+                            </div>
+                          </div>
+                      <div class="img1wrap">
+                           <div class='imgcontainer1' data-user='company'>
+                              <img src="/img/business.png" class="pg1imgs" id='companyImg' alt="Responsive image">
+                              <div class="img1label">companies</div>
+                            </div>
+                      </div>
+                         <div class="img1wrap"> 
+                            <div class='imgcontainer1' data-user='ads'>
+                                                   <img src="/img/ads.png" class="pg1imgs" alt="Responsive image">
+                                                   <div class="img1label">ads</div>
+                                                </div>
+                          </div>
+                       
+                           <div class="img1wrap">
+                              <div class='imgcontainer1' data-user='exchange'>
+                                <img src="/img/marketplace.png" class="pg1imgs" alt="Responsive image">
+                                <div class="img1label">exchange</div>
+                               </div>
+                           </div>
+                         <div class="img1wrap ">
+                              <div class='imgcontainer1' data-user='hr'>
+                               <img src="/img/hr.png" class="pg1imgs" alt="Responsive image">
+                               <div class="img1label">hr</div>
+                            </div>
+                         </div>
                       </div>
 
-                      <div class='imgcontainer1' data-user='ads'>
-                       <img src="/img/ads.png" class="pg1imgs" alt="Responsive image">
-                       <div class="img1label">ads</div>
-                    </div>
-                    <div class='imgcontainer1' data-user='exchange'>
-                       <img src="/img/marketplace.png" class="pg1imgs" alt="Responsive image">
-                       <div class="img1label">exchange</div>
-                    </div>
-                      <div class='imgcontainer1' data-user='hr'>
-                       <img src="/img/hr.png" class="pg1imgs" alt="Responsive image">
-                       <div class="img1label">hr</div>
-                    </div>
                   </div>
-                  
 
-                  <div class="screen1row" id="row3">
-                    
+                 
+
+                  <!-- <div class="screen1row" id="row2" data-user='uni'>
+                     
                   </div>
+                   -->
+
+            
                 </div>
         </div>
 
@@ -234,38 +288,73 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
             </div>
           </div>
 
-          <div class="screen4inner tableRow">
-              <table>
-                <tr class='bdytxt1'>
-                  <th class='col1'></th>
-                  <th class='col2'></th>
-                  <th class='col3'></th>
-                  <th class='col4'></th>
-                  <th class='col5'></th>
-                </tr>
-                <tr class='bdytxt1'>
-                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
-                    <td>Provides a supplement to your guidance department.</td>
-                    <td></td>
-                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
-                    <td>Speed up your admissions and sorting process.</td>
-                </tr>
-                 <tr class='bdytxt1'>
-                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
-                    <td>Delivers the best candidates right to your inbox.</td>
-                    <td></td>
-                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
-                    <td>Helps your teachers coordinate with students and parents.</td>
-                </tr>
-                 <tr class='bdytxt1'>
-                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
-                    <td>Provides a supplement to your guidance department. Here is a longer example.</td>
-                    <td></td>
-                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
-                    <td>This one is admittedly shorter...</td>
-                </tr>
-              </table>
-          </div>
+          <div class="screen4inner tableRow tableRow1">
+                        <table>
+                          <tr class='bdytxt1'>
+                            <th class='col1'></th>
+                            <th class='col2'></th>
+                            <th class='col3'></th>
+                            <th class='col4'></th>
+                            <th class='col5'></th>
+                          </tr>
+                          <tr class='bdytxt1'>
+                              <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                              <td>Provides a supplement to your guidance department.</td>
+                              <td></td>
+                              <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                              <td>Speed up your admissions and sorting process.</td>
+                          </tr>
+                           <tr class='bdytxt1'>
+                              <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                              <td>Delivers the best candidates right to your inbox.</td>
+                              <td></td>
+                              <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                              <td>Helps your teachers coordinate with students and parents.</td>
+                          </tr>
+                           <tr class='bdytxt1'>
+                              <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                              <td>Provides a supplement to your guidance department. Here is a longer example.</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                          </tr>
+                        </table>
+                    </div>
+
+                 <div class="screen4inner tableRow tableRow2">
+                        <table>
+                          <tr class='bdytxt1'>
+                            <th class='col1'></th>
+                            <th class='col2'></th>
+                       
+                          </tr>
+                          <tr class='bdytxt1'>
+                              <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                              <td>Provides a supplement to your guidance department.</td>
+                          </tr>
+                           <tr class='bdytxt1'>
+                          
+                              <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                              <td>Speed up your admissions and sorting process.</td>
+                          </tr>
+                           <tr class='bdytxt1'>
+                              <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                              <td>Delivers the best candidates right to your inbox.</td>
+                          </tr>
+                           <tr class='bdytxt1'>
+                              <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                              <td>Helps your teachers coordinate with students and parents.</td>
+                          </tr>
+                           <tr class='bdytxt1'>
+                              <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                              <td>Provides a supplement to your guidance department. Here is a longer example.</td>
+                            </tr>
+                             <tr class='bdytxt1'>
+                              <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                              <td>This one is admittedly shorter...</td>
+                          </tr>
+                        </table>
+                    </div>
 
 
           <div class="screen4inner emailForm">
@@ -274,7 +363,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
               </div>
              <div class="inputFieldContainer">
                  <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
-                     <div class="form-group" id="formField1">
+                     <div class="form-group" id="formField2">
                          <div>
                              <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
                          </div> 
@@ -308,7 +397,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
             </div>
           </div>
        
-          <div class="screen4inner tableRow">
+         <div class="screen4inner tableRow tableRow1">
               <table>
                 <tr class='bdytxt1'>
                   <th class='col1'></th>
@@ -333,13 +422,38 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                 </tr>
               </table>
           </div>
+                <div class="screen4inner tableRow tableRow2">
+              <table>
+                <tr class='bdytxt1'>
+                  <th class='col1'></th>
+                  <th class='col2'></th>
+            
+                </tr>
+                <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Advanced individual insights assure your hiring investments, while lowering cost per hire.</td>
+                  </tr>
+                   <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Direct access to our proprietary, data-driven exchange marketplace.</td>
+                </tr>
+                 <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Hypertargetting solutions for advertising, marketing, and customer engagement.</td>
+                  </tr>
+                   <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Decrease risk of workplace violence while improving employee satisfaction.</td>
+                </tr>
+              </table>
+          </div>
           <div class="screen4inner emailForm">
               <div class="inputLabel bodytxt">
                 Find out more:
               </div>
              <div class="inputFieldContainer">
                  <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
-                     <div class="form-group" id="formField1">
+                     <div class="form-group" id="formField2">
                          <div>
                              <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
                          </div> 
@@ -375,7 +489,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
             </div>
           </div>
 
-            <div class="screen4inner tableRow">
+            <div class="screen4inner tableRow tableRow1">
               <table>
                 <tr class='bdytxt1'>
                   <th class='col1'></th>
@@ -401,13 +515,36 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
               </table>
           </div>
 
+           <div class="screen4inner tableRow tableRow2">
+              <table>
+                <tr class='bdytxt1'>
+                  <th class='col1'></th>
+                  <th class='col2'></th>
+          
+                </tr>
+                <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Exclusive insight into trends and preferences of the next generation of consumers.</td>
+                </tr>
+                <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Media and Sponsorship Solutions, including Display, Video, and Native</td>
+                </tr>
+                 <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Self-Serve Solutions or Personalized Assistance with your targeted campaigns.</td>
+           
+                </tr>
+              </table>
+          </div>
+
           <div class="screen4inner emailForm">
               <div class="inputLabel bodytxt">
                 Find out more:
               </div>
              <div class="inputFieldContainer">
                  <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
-                     <div class="form-group" id="formField1">
+                     <div class="form-group" id="formField2">
                          <div>
                              <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
                          </div> 
@@ -444,7 +581,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
             </div>
           </div>
 
-          <div class="screen4inner tableRow">
+          <div class="screen4inner tableRow tableRow1">
               <table>
                 <tr class='bdytxt1'>
                   <th class='col1'></th>
@@ -469,13 +606,38 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                 </tr>
               </table>
           </div>
+
+
+          <div class="screen4inner tableRow tableRow2">
+              <table>
+                <tr class='bdytxt1'>
+                  <th class='col1'></th>
+                  <th class='col2'></th>
+                </tr>
+                <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Product-specific hyper targetting delivers your goods or services to the consumer the moment they need them.</td>
+                   
+                </tr>
+                <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Collaborations options amongst sellers to strategically combine forces to reach corporate clients.</td>
+                </tr>
+                 <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Offer services, goods, and products directly through myKlovr recommendations.</td>
+              
+                </tr>
+              </table>
+          </div>
+
           <div class="screen4inner emailForm">
               <div class="inputLabel bodytxt">
                 Find out more:
               </div>
              <div class="inputFieldContainer">
                  <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
-                     <div class="form-group" id="formField1">
+                     <div class="form-group" id="formField2">
                          <div>
                              <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
                          </div> 
@@ -515,7 +677,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
             </div>
           </div>
 
-          <div class="screen4inner tableRow">
+          <div class="screen4inner tableRow tableRow1">
               <table>
                 <tr class='bdytxt1'>
                   <th class='col1'></th>
@@ -541,13 +703,39 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                 </tr>
               </table>
           </div>
+           <div class="screen4inner tableRow tableRow2">
+              <table>
+                <tr class='bdytxt1'>
+                  <th class='col1'></th>
+                  <th class='col2'></th>
+              
+                </tr>
+                <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>We analyze your favorite employees to deliver you recommendations for potential hires that match your needs.</td>
+                </tr>
+                 <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Get a broader sense of who your future hires are before you hire them.</td>
+                </tr>
+                 <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Pre-identify potential employee liabilities through predictive marketing.</td>
+                  </tr>
+                   <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Decrease risk of sexual harassment, workplace violence, absentee rates, 
+                        and multiple other damaging - and costly - behaviors.</td>
+                </tr>
+              </table>
+          </div>
           <div class="screen4inner emailForm">
               <div class="inputLabel bodytxt">
                 Find out more:
               </div>
              <div class="inputFieldContainer">
                  <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
-                     <div class="form-group" id="formField1">
+                     <div class="form-group" id="formField2">
                          <div>
                              <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
                          </div> 
@@ -643,7 +831,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                                 <form id="myForm" data-toggle='validator' action='' method='post'>
                                   
 
-                                    <div class="form-group row" id="formField1">
+                                    <div class="form-group row" id="formField2">
                                        <div class="signModalFormField">
                                             <input type="text" class="form-control" id="inputFirstName" name='first' placeholder="Your First Name" required>
                                             <div class="help-block with-errors"></div>
@@ -651,14 +839,14 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                                       </div>
                                     </div>
 
-                                    <div class="form-group row" id="formField1">
+                                    <div class="form-group row" id="formField2">
                                         <div class="signModalFormField">
                                             <input type="text" class="form-control" id="inputLastName" name='last' placeholder="Your Last Name" required>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
 
-                                      <div class="form-group row" id="formField1">
+                                      <div class="form-group row" id="formField2">
                                         <div class="signModalFormField">
                                             <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
                                           
@@ -716,7 +904,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
          <a href="https://www.linkedin.com/company/klōver" class="socialIconLink"> <img src="../img/linked.png" alt=""></a>
       </div>
       <div id='footercontent'>Copyright &copy; 2016 myKlōvr<br> All rights reserved<br>myKlōvr is a division of Student Global, LLC.<br>1350 Avenue of the Americas<br>New York, NY, 10019, USA<br></div>
-      <div id='footerlinks'><p id='tnsnp'><a href="/terms">Terms of Service</a> | <a href='/privacy'>Privacy Policy</a></p></div>
+      <div id='footerlinks'><p id='tnsnp'><a href="/terms-conditions">Terms of Service</a> | <a href='/privacy-policy'>Privacy Policy</a></p></div>
   </div>
 </footer>
 
@@ -741,6 +929,8 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 
 </html>
+
+
 
 
 

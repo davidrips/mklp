@@ -1,8 +1,16 @@
 $(document).ready(function(){
 
+
+    $(".arrows").on('click', function(e){
+        $(window).scrollTo('#tempContainer2', {duration:800, ease: Power4.easeInOut})
+
+    })
+
       $("#row1signup").on("click", function(e){
         $('#signModal').modal();
     })
+
+
 
     $('#myForm').validator().on('submit', function (e) {
         if (e.isDefaultPrevented()) {
@@ -33,29 +41,48 @@ $(document).ready(function(){
 
      var controller = new ScrollMagic.Controller({loglevel: 3});
 
+     if(!Modernizr.touchevents){
+          $("html").addClass('desktop')
+            var vid = $("video").height();
+            console.log(vid);
+    
+
+  
+    $(window).scroll(function(){
+      if($(document).scrollTop() > vid){//Here 200 may be not be exactly 200px
+        $('video').css('display', 'none');
+        console.log('hiding');
+      }else{
+        if($('video').css('display')=='none'){console.log('wasnt showing');
+        $('video').css('display', 'initial');
+        }
+      }
+    });
+     }else{
+      $(".slideOneArrow").css("display", "none")
+     }
 
 
-    $(".is-light").each(function(index, elem){
+     
+     $(".is-light").each(function(index, elem){
 
-        var height = $(elem).height()
-        console.log(height);
-        console.log(typeof height);
-        var makeDark = new TweenMax.to($(".homeLogoPaths"), 0,{fill:'#3c3d65'})
+         var height = $(elem).height()
+         var makeLight = new TweenMax.to($(".homeLogoPaths"), 0,{fill:'white'});
+         var makeDark = new TweenMax.to($(".homeLogoPaths"), 0,{fill:'#3c3d65'})
+         var isLight = new ScrollMagic.Scene({
+             triggerElement:elem, triggerHook:"0.03"
+         }).setTween(makeDark).addTo(controller)
 
-        new ScrollMagic.Scene({
-            triggerElement:elem, duration:'"'+height+'px"', triggerHook:"0.03"
-        }).setTween(makeDark).addTo(controller);
+     })
 
-    })
+      $(".need-light").each(function(index, elem){
+         var makeLight = new TweenMax.to($(".homeLogoPaths"), 0,{fill:'white'});
+         var makeDark = new TweenMax.to($(".homeLogoPaths"), 0,{fill:'#3c3d65'})
+         var isDark = new ScrollMagic.Scene({
+             triggerElement:elem, triggerHook:"0.03"
+         }).setTween(makeLight).addTo(controller);
+     })
 
-     $(".need-light").each(function(index, elem){
-        var makeLight = new TweenMax.to($(".homeLogoPaths"), 0,{fill:'white'});
-
-           new ScrollMagic.Scene({
-            triggerElement:elem, triggerHook:"0.03"
-        }).setTween(makeLight).addTo(controller);
-
-    })
 
      var homeButton = $("#homeButton");
      homeButton.on('click', function(e){
@@ -123,7 +150,7 @@ $(document).ready(function(){
    
 
       $(".imgcontainer1").click(function(){
-         let userType = $(this).data('user')
+         var userType = $(this).data('user')
          toUser(userType)
     })
 
@@ -137,7 +164,7 @@ $(document).ready(function(){
        $.fn.matchHeight._rows($('.bdytxt1'));
 
       $(".menuButs").click(function(e){
-        let goWhere = $(this).data('where');
+        var goWhere = $(this).data('where');
         console.log(goWhere);
         e.preventDefault();
         closeNav();
@@ -160,9 +187,15 @@ $(document).ready(function(){
     })
 
 
+     function openNav() {
 
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "30vw";
+        if ($("html").hasClass("desktop")){
+            document.getElementById("mySidenav").style.width = "30vw";
+
+        }else {
+           document.getElementById("mySidenav").style.width = "50vw"; 
+        }
+        
     }
 
     function closeNav() {

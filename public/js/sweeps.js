@@ -1,6 +1,5 @@
 $(document).ready(function(){
-
-      $("#successModal").modal();
+ $("#successModal").modal();
       
  $("#share").on('click', function(e){
       e.preventDefault();
